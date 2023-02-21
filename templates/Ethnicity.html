@@ -1,0 +1,82 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ethnicity</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/Belief.css') }}" />
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <header class="header">
+                <h1 class="logo"><a href=""><div>AntiSosh</div></a>
+                </h1>
+              <ul class="main-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Prediction" >Prediction</a></li>
+                <li><a href="/connect" >Consult Pyschologist</a></li>
+                
+                {% if not loggedin %}
+                    <!---<li><a href="/regdoc" >DoctorReg</a></li>-->
+                    <li><a href="/Register" >Register</a></li>
+                    <li><a href="/Login" >Login</a></li>
+                {% else %}
+                        <li><a href="/logout" >Logout</a></li> 
+                {% endif %}
+        
+                <li>
+                </ul>
+            </header>
+            </div>
+        </nav>
+
+
+        <section class="shop" id="shop">
+            <div class="containerx">
+                
+                {% for item in data %}
+                    <div class="box">
+                        <div class="item-inner">
+                            <h3>{{item[4]}}</h3>
+                        <p>{{item[3][0:200]}} ...</p>
+                            <div class="read-more-cont">
+                                <p>{{item[3]}}</p>
+                            </div>
+                            <button class="btn" type="button">Read More</button> 
+                        </div>
+                    </div>
+                {%endfor%}
+            </div>
+        </section>
+        <br>
+        <br>
+        <form action="/Ethnicity" method="POST">
+            <label>What's your story</label>
+            <input type="TextBox" id="title" name="title">
+            <input type="TextBox" id="story" name="story">
+            <input type="submit" class="btn btn-primary" value="Submit"></br></br>
+        </form>
+
+ <!-- read more popup box start -->
+ <div class="popup-box">
+    <div class="popup-content">
+        <div class="popup-header">
+           <h3></h3>
+           <span class="popup-close-icon">&times;</span>
+        </div>
+        <div class="popup-body">
+          
+        </div>
+        <div class="popup-footer">
+          <button class="btn popup-close-btn">Close</button>
+        </div>
+    </div>
+ </div>
+<!-- read more popup box end -->
+
+
+
+<script src="{{url_for('static', filename='script.js')}}"></script>
+    </body>
+</html>

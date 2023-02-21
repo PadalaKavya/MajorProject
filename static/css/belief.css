@@ -1,0 +1,246 @@
+*{
+	/* padding: 0;
+	margin: 0; */
+	/* box-sizing: border-box; */
+	/* font-family: Brush Script MT, Brush Script Std, cursive; */
+	/* text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth; */
+}
+body{
+	padding-top: 10px;
+    background: #3a004d;
+    background: linear-gradient(to left,#bef1f9  40%,#a8d1fd 60%);
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+  
+  }
+  ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+	
+	
+	h2,
+	h3,
+	a {
+	color: #050c0a;
+	}
+	
+	a {
+	text-decoration: none;
+	}
+	
+	
+	
+	.logo {
+	margin: 0;
+	font-size: 1.45em;
+	}
+	
+	.main-nav {
+	margin-top: 5px;
+	
+	}
+	.logo a,
+	.main-nav a {
+	padding: 5px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	}
+	
+	.main-nav a {
+	color: #15011e;
+	font-size: .99em;
+	}
+	
+	.main-nav a:hover {
+	color: #bec1c6;
+	}
+	
+	
+	
+	.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #d0cbff;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	}
+	
+	
+	/* ================================= 
+	Media Queries
+	==================================== */
+	
+	
+	
+	
+	@media (min-width: 769px) {
+	.header,
+	.main-nav {
+	display: flex;
+	}
+	.header {
+	flex-direction: column;
+	align-items: center;
+	
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1150px;
+	
+	}
+	
+	}
+	
+	@media (min-width: 1025px) {
+	.header {
+	flex-direction: row;
+	justify-content: space-between;
+	}
+	
+	}
+section{
+	padding: 10px 0px 0px;
+}
+.containerx{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(360px, auto));
+	align-items: center;
+	gap: 2rem;
+	text-align: center;
+	cursor: pointer;
+	padding-top: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.box{
+	padding: 0px 10px 10px 10px;
+	background: #EAEAEA;
+	box-shadow: 5px 20px 46.1276px #EAEAEA;
+	border-radius: 10px;
+	position: relative;
+	transition: all .35s ease;
+}
+.box img{
+	width: 100%;
+	border-radius: 10px;
+}
+.box h3{
+	font-size: 15px;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+.box h4{
+	font-size: 14px;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+.box:hover{
+	transform: translateY(-5px);
+}
+.shop .containerx .read-more-cont{
+	display: none;
+}
+
+.popup-box{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top:0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 500;
+	visibility: hidden;
+	opacity:0;
+	transition: all 0.5s ease-in-out;
+}
+.popup-box.open{
+  visibility: visible;
+	opacity:1;	
+}
+.popup-box .popup-content{
+	background-color: #ffffff;
+	width: 600px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	border-radius: 8px;
+}
+
+.popup-box .popup-header{
+	padding: 15px 40px 15px 15px;
+	border-bottom: 1px solid #dddddd;
+}
+.popup-box .popup-header h3{
+	margin:0;
+	color:#E91E63;
+	font-size: 20px;
+}
+.popup-box .popup-header .popup-close-icon{
+	position: absolute;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #555555;
+    font-size: 28px;
+    line-height: 30px;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+.popup-box .popup-body{
+	padding: 15px;
+	max-height: 300px;
+	overflow-y: auto;
+}
+.popup-box .popup-body img{
+	width: 100%;
+	display: block;
+	margin-top: 15px;
+}
+.popup-box .popup-body p{
+	font-size: 16px;
+	color:#555555;
+	margin:0 0 15px;
+}
+.popup-box .popup-footer{
+	padding: 15px;
+	border-top:1px solid #dddddd;
+	text-align: right;
+}
+.popup-box .popup-footer .btn{
+	padding: 8px 15px;
+	border:1px solid #555555;
+	color:#555555;
+	font-size: 16px;
+	background-color: transparent;
+	cursor: pointer;
+	border-radius: 4px;
+}
+.popup-box .popup-footer .btn:focus{
+	outline: none;
+}
+
+
+/*responsive*/
+
+@media(max-width: 767px){
+	.services .service-items .item{
+	  flex:0 0 100%;
+      max-width: 100%;
+   }
+   .popup-box .popup-content{
+   	 width: calc(100% - 30px);
+   }
+}
