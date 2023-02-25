@@ -115,6 +115,47 @@ justify-content: space-between;
 }
 
 }
+
+section{
+	padding: 10px 0px 0px;
+}
+.containerxy{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(560px, auto));
+	align-items: center;
+	gap: 2rem;
+	text-align: center;
+	cursor: pointer;
+	padding-top: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.boxx{
+	padding: 0px 10px 10px 10px;
+	background: #E8E5D8;
+	box-shadow: 5px 20px 46.1276px #E8E5D8;
+	border-radius: 10px;
+	position: relative;
+	transition: all .35s ease;
+}
+.boxx img{
+	width: 60%;
+	height: 50%;
+  border-radius: 10px;
+}
+.boxx h4{
+	font-size: 40px;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+.boxx h6{
+	font-size: 20px;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+.boxx:hover{
+	transform: translateY(-5px);
+}
     </style>
     <body>
         <nav class="navbar">
@@ -124,8 +165,8 @@ justify-content: space-between;
               <ul class="main-nav">
                 <li><a href="/">Home</a></li>
                 <li><a href="/Prediction" >Prediction</a></li>
-                <li><a href="/connect" >Consult Pyschologist</a></li>
-                
+                <li><a href="/Consultation" >Consult Pyschologist</a></li>
+                <li><a href="/Stories" >Stories</a></li>
                 {% if not loggedin %}
                     <!---<li><a href="/regdoc" >DoctorReg</a></li>-->
                     <li><a href="/Register" >Register</a></li>
@@ -139,16 +180,34 @@ justify-content: space-between;
             </header>
             </div>
         </nav>
-
-        <section class="shop" id="shop">
-            <div class="containerx">
-                <div class="box">
-                    <div class="item-inner">
-                    </div>
+        <p></p>
+        <div style="width: 95%;margin: 0 auto;">
+            <img src="static/bg2.png" style="width: 100%;height: 500px;">
+          </div>
+          <section class="shop" id="shop">
+            <div class="containerxy">
+                <div class="boxx">
+                  <br>
+                    <img src="static/belief.jpg">
+                    <li><a href="/Belief" target="_blank">Belief</a></li> 
                 </div>
-        <li><a href="/Belief" target="_blank">Belief</a></li>
-        <li><a href="/Age" target="_blank">Age</a></li>
-        <li><a href="/Gender" target="_blank">Gender</a></li>
-        <li><a href="/Ethnicity" target="_blank">Ethnicity</a></li>
+                <div class="boxx">
+                    <br>
+                      <img src="static/age.jpg">
+                      <li><a href="/Age" target="_blank">Age</a></li>
+                  </div>
+                  <div class="boxx">
+                    <br>
+                      <img src="static/gender.jpg">
+                      <li><a href="/Gender" target="_blank">Gender</a></li>
+                  </div>
+                  <div class="boxx">
+                    <br>
+                      <img src="static/ethnicity.png">
+                      <li><a href="/Ethnicity" target="_blank">Ethnicity</a></li>
+                  </div>
+            </div>
+        </section>       
+        
     </body>
 </html>
